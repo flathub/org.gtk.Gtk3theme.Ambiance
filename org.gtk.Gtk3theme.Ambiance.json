@@ -1,0 +1,28 @@
+{
+  "id": "org.gtk.Gtk3theme.Ambiance",
+  "branch": "3.22",
+  "runtime": "org.gnome.Sdk",
+  "build-extension": true,
+  "sdk": "org.gnome.Sdk",
+  "runtime-version": "3.24",
+  "separate-locales": false,
+  "modules": [
+    {
+      "name": "ambiance",
+      "buildsystem": "simple",
+      "build-commands": [
+        "make",
+        "install -dm755 /usr/share/runtime/share/themes/Ambiance/gtk-3.0",
+        "cp -aL Ambiance/gtk-3.20/* /usr/share/runtime/share/themes/Ambiance/gtk-3.0",
+        "cp -a Ambiance/index.theme /usr/share/runtime/share/themes/Ambiance"
+      ],
+      "sources": [
+        {
+            "type": "bzr",
+            "url": "lp:~3v1n0/ubuntu-themes/gs-decorations-fixes",
+            "revision": "554"
+        }
+      ]
+    }
+  ]
+}
