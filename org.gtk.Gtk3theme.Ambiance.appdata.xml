@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+  <id>org.gtk.Gtk3theme.Ambiance</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Ambiance Gtk theme</name>
+  <summary>Ambiance Gtk theme used by Ubuntu</summary>
+  <description>
+    <p>Default Ubuntu theme.</p>
+  </description>
+  <url type="homepage">https://launchpad.net/ubuntu-themes</url>
+</component>

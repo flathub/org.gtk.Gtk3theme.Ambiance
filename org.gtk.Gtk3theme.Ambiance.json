@@ -5,6 +5,7 @@
   "build-extension": true,
   "sdk": "org.gnome.Sdk",
   "runtime-version": "3.24",
+  "appstream-compose": false,
   "separate-locales": false,
   "modules": [
     {
@@ -23,6 +24,21 @@
             "revision": "554"
         }
       ]
-    }
+    },
+    {
+      "name": "appdata",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p ${FLATPAK_DEST}/share/appdata",
+        "cp org.gtk.Gtk3theme.Ambiance.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose --basename=org.gtk.Gtk3theme.Ambiance --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Ambiance"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "org.gtk.Gtk3theme.Ambiance.appdata.xml"
+        }
+      ]
+  }
   ]
 }
